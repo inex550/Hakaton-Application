@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/signals_item"
+        android:title="Осмотр"
+        android:icon="@drawable/ic_nfc"/>
+
+    <item
+        android:id="@+id/guard_item"
+        android:title="@string/add"
+        android:icon="@drawable/ic_add_outline"/>
+
+    <item
+        android:id="@+id/admin_item"
+        android:title="@string/admin"
+        android:icon="@drawable/ic_setting"/>
+
+</menu>

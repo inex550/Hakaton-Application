@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Hakaton-Bastion</string>
+    <string name="enter_pin">Введите пин-код для авторизации</string>
+    <string name="admin">Администратор</string>
+    <string name="signals">Сигналы</string>
+    <string name="add">Добавить</string>
+</resources>
