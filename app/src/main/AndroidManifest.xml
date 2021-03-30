@@ -17,7 +17,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HakatonBastion"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.capitan.CapitanActivity"></activity>
+        <activity android:name=".ui.guard.GuardPlaceActivity"></activity>
+        <activity android:name=".ui.guard.GuardActivity" />
+        <activity android:name=".ui.add_place_activity.AddNewPlaceActivity" />
+        <activity android:name=".ui.capitan.CapitanActivity" />
         <activity android:name=".ui.content.ContentActivity">
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />

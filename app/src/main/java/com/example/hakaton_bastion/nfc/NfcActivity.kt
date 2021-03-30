@@ -7,6 +7,8 @@ import android.nfc.Tag
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import java.util.*
+import kotlin.experimental.and
 
 abstract class NfcActivity: AppCompatActivity() {
 
@@ -25,10 +27,10 @@ abstract class NfcActivity: AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         val pendingIntent = PendingIntent.getActivity(
-                this,
-                0,
-                Intent(this, javaClass).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP),
-                0
+            this,
+            0,
+            Intent(this, javaClass).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP),
+            0
         )
         nfcAdapter!!.enableForegroundDispatch(this, pendingIntent, null, null)
     }
@@ -48,16 +50,17 @@ abstract class NfcActivity: AppCompatActivity() {
         }
     }
 
-    private fun toHex(bytes: ByteArray): String {
+    fun toHex(bytes: ByteArray): String {
         val sb = StringBuilder()
-        for (i in bytes.indices.reversed()) {
+        for (i in bytes.indices) {
+            if (i > 0) {
+                sb.append(":")
+            }
             val b: Int = bytes[i].toInt() and 0xff
             if (b < 0x10) sb.append('0')
             sb.append(Integer.toHexString(b))
-            if (i > 0)
-                sb.append(":")
         }
-        return sb.toString()
+        return sb.toString().toUpperCase(Locale.ROOT)
     }
 
     override fun onNewIntent(intent: Intent) {

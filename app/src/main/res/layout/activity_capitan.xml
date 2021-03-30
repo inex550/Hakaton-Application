@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.capitan.CapitanActivity">
+    tools:context=".ui.capitan.CapitanActivity"
+    android:background="@color/light_blue">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/place_list_rv"
@@ -12,12 +13,15 @@
         android:layout_height="match_parent"
         android:layout_above="@id/add_place_btn"/>
 
-    <Button
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_place_btn"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Добавить"
         android:layout_alignParentBottom="true"
-        android:layout_margin="8dp"/>
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_add"
+        android:layout_margin="12dp"
+        android:backgroundTint="#1D82D3"
+        app:tint="@color/white"/>
 
 </RelativeLayout>

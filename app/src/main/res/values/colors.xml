@@ -9,5 +9,8 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="light_blue">#03A9F4</color>
-    <color name="light_blue_100">#0D00BCD4</color>
+    <color name="light_blue_100">#2196F3</color>
+    
+    <color name="light_blue_transparent_20">#3203A9F4</color>
+    <color name="light_blue_transparent_30">#4D03A9F4</color>
 </resources>

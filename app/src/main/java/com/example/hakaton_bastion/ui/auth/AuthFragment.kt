@@ -9,10 +9,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.hakaton_bastion.R
 import com.example.hakaton_bastion.databinding.FragmentAuthBinding
-import com.example.hakaton_bastion.models.request.PinCode
+import com.example.hakaton_bastion.models.network.User
 
 class AuthFragment(
-    private val successFunc: () -> Unit
+    private val successFunc: (User) -> Unit
 ): Fragment() {
 
     private var _binding: FragmentAuthBinding? = null
@@ -33,13 +33,13 @@ class AuthFragment(
     ): View {
         _binding = FragmentAuthBinding.inflate(inflater, container, false)
 
-        viewModel.token.observe(this) { token ->
-            if (token == null) {
+        viewModel.user.observe(this) { user ->
+            if (user == null) {
                 Toast.makeText(requireContext(), "Не правильный пин-код", Toast.LENGTH_SHORT).show()
                 return@observe
             }
 
-            successFunc()
+            successFunc(user)
         }
 
         viewModel.error.observe(this) { error ->
@@ -72,7 +72,7 @@ class AuthFragment(
                 return@setOnClickListener
             }
 
-            viewModel.signIn(PinCode(pinCode))
+            viewModel.signIn(pinCode)
         }
 
         return binding.root

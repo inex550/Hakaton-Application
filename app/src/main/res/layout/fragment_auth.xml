@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -91,7 +93,10 @@
         android:layout_below="@id/ovals_ll"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
-        android:visibility="gone"/>
+        android:color="@color/light_blue_transparent_20"
+        android:indeterminateTint="@color/light_blue_transparent_30"
+        android:visibility="gone"
+        tools:visibility="visible"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -111,101 +116,122 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/pin_btn_1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:textColor="@color/white"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/light_blue_100"
+                    android:background="@drawable/blue_ripple_transparent"
                     android:text="1"/>
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/pin_btn_2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:textColor="@color/white"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/light_blue_100"
+                    android:background="@drawable/blue_ripple_transparent"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
                     android:text="2"/>
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/pin_btn_3"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:textColor="@color/white"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/light_blue_100"
+                    android:background="@drawable/blue_ripple_transparent"
                     android:text="3"/>
 
             </LinearLayout>
 
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="8dp"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/pin_btn_4"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:textColor="@color/white"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/light_blue_100"
+                    android:background="@drawable/blue_ripple_transparent"
                     android:text="4"/>
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/pin_btn_5"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:textColor="@color/white"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/light_blue_100"
+                    android:background="@drawable/blue_ripple_transparent"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
                     android:text="5"/>
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/pin_btn_6"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:textColor="@color/white"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/light_blue_100"
+                    android:background="@drawable/blue_ripple_transparent"
                     android:text="6"/>
 
             </LinearLayout>
 
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="8dp"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/pin_btn_7"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:textColor="@color/white"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/light_blue_100"
+                    android:background="@drawable/blue_ripple_transparent"
                     android:text="7"/>
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/pin_btn_8"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:textColor="@color/white"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/light_blue_100"
+                    android:background="@drawable/blue_ripple_transparent"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
                     android:text="8"/>
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/pin_btn_9"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:textColor="@color/white"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/light_blue_100"
+                    android:background="@drawable/blue_ripple_transparent"
                     android:text="9"/>
 
             </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="8dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -213,32 +239,35 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/clear_btn"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:textColor="@color/white"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/light_blue_100"
+                    android:background="@drawable/blue_ripple_transparent"
                     android:text="C"
                     android:textStyle="bold"
                     android:textSize="20sp"/>
-
-                <Button
+                
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/pin_btn_0"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:textColor="@color/white"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/light_blue_100"
+                    android:background="@drawable/blue_ripple_transparent"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
                     android:text="0"/>
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/ok_btn"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:textColor="@color/white"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/light_blue_100"
+                    android:background="@drawable/blue_ripple_transparent"
                     android:text="ОК"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
